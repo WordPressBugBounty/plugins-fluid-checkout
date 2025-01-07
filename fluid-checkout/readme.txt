@@ -4,7 +4,7 @@ Tags: woocommerce, checkout, conversion, multi-step, one-page
 Requires PHP: 7.4
 Requires at least: 5.0
 Tested up to: 6.7.1
-Stable tag: 4.0.0
+Stable tag: 4.0.1
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -361,6 +361,29 @@ The plugin provides widget areas in strategic positions on the checkout page for
 
 
 == Changelog ==
+
+= 4.0.1 - 2025-01-07 =
+
+* Bump tested up to WooCommerce 9.5.1
+* Added: Compatibility with theme Loobek.
+* Added: Compatibility with plugin Debloat by asadkn.
+* Added: Compatibility with plugin OTP Login/Signup Woocommerce Premium.
+* Added: Option to set form fields font size to 16px and avoid automatic zoom in issue on some mobile browsers.
+* Added: Option to only show allowed countries for shipping or billing for the International Phone Number feature (PRO).
+* Improved: Use template file from checkout page to display available payment methods on the account add payment method page.
+* Fixed: Compatibility with theme Shoptimizer. Fix layout of the header when using some header variations from the theme, and restore the padlock icon on proceed to checkout and place order buttons.
+* Fixed: Compatibility with plugin WooCommerce Subscriptions. PHP warning when trying to output information for recurring shipping packages.
+* Fixed: Compatibility with plugin Germanized for WooCommerce. Remove duplicate place order button that appears briefly on the checkout page.
+* Fixed: Compatibility with plugin Germanized for WooCommerce PRO. Fixes VAT ID being displayed twice on the substep review text for billing and shipping.
+* Fixed: Issue with shipping methods section displayed blank in some cases when no methods are available.
+* Fixed: Issues with collapsible/expansible sections wrongly setting focus at initialization.
+* Fixed: Prevent substep review text from being visible at the same time as the fields section.
+* Fixed: Prevent order summary from being visible on mobile view at first while still loading the checkout page.
+* Fixed: Add hooks for billing phone on contact step earlier to prevent compatibility issues with other plugins.
+* Fixed: Prevent horizontal scroll on IE, EDGE and Safari.
+* Fixed: Make sure Mailcheck typo checks is run only on targeted email fields.
+* Fixed: Fix error when trying to remove phone number from address data in some cases.
+* Fixed: Fatal error when trying to change the translation file loaded for language variations on versions of WordPress prior to 6.6.0.
 
 = 4.0.0 - 2024-12-11 =
 
