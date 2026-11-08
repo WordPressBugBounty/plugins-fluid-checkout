@@ -1,0 +1,3 @@
+body.theme-porto.fc-admin-preview--hide-header-footer #footer {
+  display: none !important;
+}

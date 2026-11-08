@@ -1,0 +1,509 @@
+.fc-dashboard-section__row [class*=fc-] {
+  box-sizing: border-box;
+}
+
+.fc-dashboard-section__row {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 30px;
+  border-radius: 13px;
+  background-color: var(--fluidcheckout--color--white, #fff);
+  box-shadow: 0 2px 4px var(--fluidcheckout--elevation-shadow-medium, rgba(0, 0, 0, 0.15));
+}
+
+.fc-dashboard-section__row-title {
+  margin-top: 0;
+}
+
+.fc-dashboard-section__row td {
+  padding: 0;
+}
+
+.form-table td .fc-dashboard-section-title {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.form-table td p.fc-dashboard-section__subtitle {
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #68717a;
+}
+
+.fc-dashboard-checklist {
+  list-style: none;
+  margin: 16px 0 0;
+  padding: 0;
+  counter-reset: fc-setup-step;
+}
+
+.fc-dashboard-checklist__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 0;
+  padding: 10px 0;
+  counter-increment: fc-setup-step;
+}
+
+.fc-dashboard-checklist__item + .fc-dashboard-checklist__item {
+  border-top: 1px solid rgba(200, 215, 225, 0.5);
+}
+
+.fc-dashboard-checklist__marker {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border: 2px solid rgba(200, 215, 225, 0.7);
+  border-radius: 50%;
+  box-sizing: border-box;
+  color: #2e4453;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.fc-dashboard-checklist__marker::before {
+  content: counter(fc-setup-step);
+}
+
+.fc-dashboard-checklist__item.is-completed .fc-dashboard-checklist__marker {
+  border-color: var(--fluidcheckout--color--success, #007a3d);
+  background: var(--fluidcheckout--color--success, #007a3d);
+  color: var(--fluidcheckout--color--white, #fff);
+}
+
+.fc-dashboard-checklist__item.is-completed .fc-dashboard-checklist__marker::before {
+  content: "\f147";
+  font-family: dashicons;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 400;
+  font-style: normal;
+  speak: never;
+  text-decoration: inherit;
+  text-transform: none;
+  text-rendering: auto;
+  text-align: center;
+  vertical-align: middle;
+  color: var(--fluidcheckout--color--white, #fff);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fc-dashboard-checklist__label {
+  flex: 1 1 auto;
+  min-width: 0;
+  padding-top: 4px;
+  line-height: 1.5;
+}
+
+.fc-dashboard-checklist__promo {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  margin-left: auto;
+  padding-top: 2px;
+}
+
+.rtl .fc-dashboard-checklist__promo {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.fc-settings-card--addons {
+  border: solid 2px var(--fluidcheckout--emphasis-border-color, #646970);
+}
+
+.fc-addons-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.fc-addons__item {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  flex-grow: 0;
+  flex-shrink: 0;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+  border: solid 1px rgba(200, 215, 225, 0.5);
+  border-radius: 1px;
+  background-color: var(--fluidcheckout--color--white, #fff);
+}
+@media (min-width: 600px) {
+  .fc-addons__item {
+    width: calc(50% - 10px);
+  }
+}
+
+@media (min-width: 600px) {
+  .fc-addons__item.fc-addons__item--bundle,
+  .fc-addons__item.fc-addons__item--highlight,
+  .fc-addons__item.fc-addons__item--highlight-conversion,
+  .fc-addons__item.fc-addons__item--wide {
+    width: 100%;
+  }
+}
+
+.fc-addons__item.fc-addons__item--bundle {
+  border: solid 2px var(--fluidcheckout--color--darker-grey, #1E212B);
+}
+
+.fc-addons__item.fc-addons__item--highlight {
+  border: solid 2px var(--fluidcheckout--emphasis-border-color, #646970);
+}
+
+.fc-addons__item.fc-addons__item--highlight-conversion {
+  border: solid 2px var(--fluidcheckout--conversion-kit-brand-color, #0b7a6f);
+}
+
+.fc-addons__item-inner {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+}
+@media (max-width: 782px) {
+  .fc-addons__item-inner {
+    padding: 16px;
+  }
+}
+
+.fc-addons__item-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  gap: 20px;
+}
+
+.fc-addons__item-image {
+  float: left;
+  width: 70px;
+  height: auto;
+  border-radius: 5px;
+}
+
+.fc-addons__item-title-section {
+  flex-shrink: 1;
+}
+
+.fc-addons__item-title {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.fc-addons__item p.fc-dashboard-section__subtitle {
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+.fc-addons__item-features-list {
+  display: block;
+  list-style: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.fc-addons__item-features-list--columns {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0 20px;
+}
+@media (min-width: 600px) {
+  .fc-addons__item-features-list--columns {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.fc-addons__item-features-list li {
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 35px;
+}
+
+.fc-addons__item-features-list li::before {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: -5px;
+  font-size: 30px;
+  color: var(--fluidcheckout--color--success, #007a3d);
+  content: "\f147";
+  font-family: dashicons;
+  display: inline-block;
+  line-height: 1;
+  font-weight: 400;
+  font-style: normal;
+  speak: never;
+  text-decoration: inherit;
+  text-transform: none;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  transition: color 0.1s ease-in;
+}
+
+.fc-addons__item-description {
+  flex-grow: 1;
+  margin-top: 20px;
+}
+
+.fc-addons__item-description > *:first-child {
+  margin-top: 0;
+}
+
+.fc-addons__item-description > *:last-child {
+  margin-bottom: 0;
+}
+
+.fc-addons__item-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
+  padding: 20px;
+  border-top: 1px solid rgba(200, 215, 225, 0.5);
+  background-color: rgba(200, 215, 225, 0.15);
+}
+@media (max-width: 782px) {
+  .fc-addons__item-footer {
+    padding: 16px;
+  }
+}
+
+.fc-addons__item-actions {
+  width: 100%;
+  margin-top: 0;
+}
+
+.fc-addons__item-actions .button,
+.fc-addons__item-actions .fc-addons__item-license-select {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+}
+
+.fc-addons__item-actions .fc-addons__item-license-select {
+  display: block;
+  margin: 0;
+  text-align: center;
+  -moz-text-align-last: center;
+  text-align-last: center;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.fc-addons__item-actions .button + .fc-addons__item-action-notice,
+.fc-addons__item-actions .button + .button,
+.fc-addons__item-actions .fc-addons__item-license-select + .button,
+.fc-addons__item-actions .fc-addons__item-action-notice {
+  margin-top: 10px;
+}
+
+.fc-addons__item-actions .button.button--activated {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  width: 100%;
+  background: var(--fluidcheckout--color--white, #fff) !important;
+  border-color: var(--fluidcheckout--color--success, #007a3d) !important;
+  color: var(--fluidcheckout--color--success, #007a3d) !important;
+  text-align: center;
+}
+
+.fc-addons__item-actions .button.button--activated:hover,
+.fc-addons__item-actions .button.button--activated:focus,
+.fc-addons__item-actions .button.button--activated:disabled,
+.fc-addons__item-actions .button.button--activated.disabled {
+  background: var(--fluidcheckout--color--white, #fff) !important;
+  border-color: var(--fluidcheckout--color--success, #007a3d) !important;
+  color: var(--fluidcheckout--color--success, #007a3d) !important;
+}
+
+.fc-addons__item-actions .button.button--activated::before {
+  content: "\f147";
+  font-family: dashicons;
+  display: inline-block;
+  flex-shrink: 0;
+  margin: 0 6px 0 0;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 400;
+  font-style: normal;
+  speak: never;
+  text-decoration: inherit;
+  text-transform: none;
+  text-rendering: auto;
+  text-align: center;
+  vertical-align: middle;
+  color: var(--fluidcheckout--color--success, #007a3d);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.rtl .fc-addons__item-actions .button.button--activated::before {
+  margin: 0 0 0 6px;
+}
+
+.fc-addons__item-actions .button.button-primary.button--install {
+  background: var(--fluidcheckout--color--success, #007a3d);
+  border-color: var(--fluidcheckout--color--success, #007a3d);
+  color: var(--fluidcheckout--color--white, #fff);
+}
+
+.fc-addons__item-actions .button.button-primary.button--install:hover,
+.fc-addons__item-actions .button.button-primary.button--install:focus {
+  background: var(--fluidcheckout--color--success, #007a3d);
+  border-color: var(--fluidcheckout--color--success, #007a3d);
+  box-shadow: inset 0 0 0 100vmax rgba(0, 0, 0, 0.12);
+  color: var(--fluidcheckout--color--white, #fff);
+}
+
+.fc-addons__item-action-notice {
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 8px 10px;
+  width: 100%;
+}
+
+.fc-addons__item-action-notice[hidden] {
+  display: none;
+}
+
+.fc-addons__item-action-notice--success {
+  background: var(--fluidcheckout--color--success-highlight, #e0f5eb);
+  border: 1px solid var(--fluidcheckout--color--success, #007a3d);
+  color: var(--fluidcheckout--color--success, #007a3d);
+}
+
+.fc-addons__item-action-notice--error {
+  background: #f5f7f8;
+  border: 1px solid var(--fluidcheckout--color--error, #cc1818);
+  color: var(--fluidcheckout--color--error, #cc1818);
+}
+
+.fc-addons__item-title-section > .fc-settings-badge {
+  display: inline-block;
+  margin: 0 0 6px;
+}
+
+.fc-addons__item-actions--marketing {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 10px;
+}
+
+.fc-addons__item-actions--marketing .button,
+.fc-addons__item-actions--marketing .fc-settings-button {
+  flex: 1 1 0;
+  box-sizing: border-box;
+  width: auto;
+  max-width: none;
+  min-width: 0;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.fc-addons__item-actions--marketing .fc-addons__item-license-select,
+.fc-addons__item-actions--marketing .fc-addons__item-action-notice {
+  flex: 1 0 100%;
+  width: 100%;
+}
+
+.fc-addons__item-actions--marketing .button + .button,
+.fc-addons__item-actions--marketing .button + .fc-settings-button,
+.fc-addons__item-actions--marketing .button + .fc-addons__item-action-notice,
+.fc-addons__item-actions--marketing .fc-settings-button + .button,
+.fc-addons__item-actions--marketing .fc-addons__item-license-select + .button,
+.fc-addons__item-actions--marketing .fc-addons__item-action-notice {
+  margin-top: 0;
+}
+
+.fc-addons__item-actions--promo-inline {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  width: auto;
+  max-width: 100%;
+  margin-top: 0;
+}
+
+.fc-addons__item-actions--promo-inline .button,
+.fc-addons__item-actions--promo-inline .fc-settings-button,
+.fc-addons__item-actions--promo-inline .fc-addons__item-license-select {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  box-sizing: border-box;
+  width: auto !important;
+  max-width: none !important;
+  margin-top: 0 !important;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.fc-addons__item-actions--promo-inline .button.button--activated {
+  width: auto !important;
+  max-width: none !important;
+}
+
+.fc-addons__item-actions--promo-inline .fc-addons__item-license-select,
+.fc-addons__item-actions--promo-inline .fc-addons__item-action-notice {
+  flex: 1 0 100%;
+  width: 100%;
+}
+
+.fc-addons__item-actions--promo-inline .button + .fc-addons__item-action-notice,
+.fc-addons__item-actions--promo-inline .button + .button,
+.fc-addons__item-actions--promo-inline .fc-settings-button + .button,
+.fc-addons__item-actions--promo-inline .button + .fc-settings-button,
+.fc-addons__item-actions--promo-inline .fc-settings-button + .fc-settings-button,
+.fc-addons__item-actions--promo-inline .fc-addons__item-license-select + .button,
+.fc-addons__item-actions--promo-inline .fc-addons__item-action-notice {
+  margin-top: 0 !important;
+}
+
+.fc-settings-card--promo .fc-settings-card__footer {
+  align-items: center;
+}
+
+.fc-dashboard__disclaimer {
+  font-size: 12px;
+}
+
+.fc-dashboard__disclaimer ul {
+  list-style: circle;
+  padding-left: 20px;
+}

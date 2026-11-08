@@ -1,0 +1,286 @@
+.image-upload__wrapper {
+  width: 100%;
+}
+
+.image-upload-preview {
+  width: 100%;
+  max-width: none;
+}
+.image-upload-preview .placeholder {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  cursor: default;
+  border: 1px dashed #d0d1d3;
+  box-sizing: border-box;
+  padding: 9px;
+  line-height: 20px;
+}
+.image-upload-preview .placeholder img {
+  max-width: 100%;
+  height: auto;
+}
+.image-upload-preview .actions {
+  margin-top: 8px;
+}
+
+.fc-telemetry-enable-actions {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 100%;
+  gap: 8px;
+  margin: 8px 0 0;
+  width: 100%;
+}
+
+.fc-telemetry-enable-actions__feedback {
+  margin: 8px 0 0;
+}
+
+.fc-telemetry-enable-actions__feedback.is-error {
+  color: var(--fluidcheckout--color--error, #cc1818);
+}
+
+.fc-telemetry-enable-actions__feedback.is-success {
+  color: var(--fluidcheckout--color--success, #007a3d);
+}
+
+.fc-telemetry-enable-actions__feedback.is-hidden {
+  display: none;
+}
+
+body.fc-telemetry-modal-open {
+  overflow: hidden;
+}
+
+.fc-telemetry-modal {
+  display: none;
+  inset: 0;
+  padding: 24px;
+  position: fixed;
+  z-index: 100000;
+}
+
+.fc-telemetry-modal.is-open {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.fc-telemetry-modal__backdrop {
+  background: var(--fluidcheckout--modal-backdrop-background, rgba(0, 0, 0, 0.55));
+  inset: 0;
+  position: absolute;
+}
+
+.fc-telemetry-modal__dialog {
+  background: var(--fluidcheckout--color--white, #fff);
+  border: 1px solid #d0d1d3;
+  border-radius: 4px;
+  box-shadow: 0 8px 32px var(--fluidcheckout--elevation-shadow-strong, rgba(0, 0, 0, 0.2));
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 48px);
+  max-width: 900px;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+.fc-telemetry-modal__header {
+  align-items: center;
+  border-bottom: 1px solid #d0d1d3;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 20px;
+}
+
+.fc-telemetry-modal__header h2 {
+  font-size: 18px;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.fc-telemetry-modal__close {
+  background: transparent;
+  border: 0;
+  color: var(--fluidcheckout--secondary-control-color, #50575e);
+  cursor: pointer;
+  font-size: 24px;
+  line-height: 1;
+  padding: 0;
+}
+
+.fc-telemetry-modal__body {
+  overflow: auto;
+  padding: 16px 20px;
+}
+
+.fc-telemetry-modal__payload {
+  background: #f5f7f8;
+  border: 1px solid #d0d1d3;
+  border-radius: 4px;
+  font-family: Consolas, Monaco, monospace;
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 12px 0 0;
+  max-height: 420px;
+  min-height: 120px;
+  overflow: auto;
+  padding: 12px;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.fc-telemetry-modal__feedback {
+  margin: 12px 0 0;
+}
+
+.fc-telemetry-modal__feedback.is-error {
+  color: var(--fluidcheckout--color--error, #cc1818);
+}
+
+.fc-telemetry-modal__feedback.is-success {
+  color: var(--fluidcheckout--color--success, #007a3d);
+}
+
+.fc-telemetry-modal__footer {
+  border-top: 1px solid #d0d1d3;
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  padding: 16px 20px;
+}
+
+.fc-telemetry-modal__send-button.is-hidden {
+  display: none;
+}
+
+.fc-telemetry-modal__feedback.is-hidden {
+  display: none;
+}
+
+.fc-settings-field--fc_layout_selector .fc-settings-field__control {
+  background-color: transparent;
+}
+
+.fc-settings-field--fc_template_selector .fc-settings-field__control {
+  padding: 0;
+  background-color: transparent;
+}
+
+.fc-settings-radio-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  width: 100%;
+}
+
+.fc-settings-radio-option {
+  display: flex;
+  flex: 1 1 calc(50% - 4px);
+  align-items: center;
+  gap: 10px;
+  max-width: calc(50% - 4px);
+  min-width: 0;
+  min-height: 50px;
+  margin: 0;
+  padding: 13px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 5px;
+  background: var(--fluidcheckout--color--white, #fff);
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0), 0 0 0 0 rgba(0, 0, 0, 0), 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+  box-sizing: border-box;
+  color: #2e4453;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.2;
+  text-align: left;
+  cursor: pointer;
+}
+
+.fc-settings-wrap .fc-settings-radio-option input[type=radio],
+.fc-settings-wrap .fc-settings-radio-option input[type=checkbox] {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  width: 1rem;
+  min-width: 1rem;
+  height: 1rem;
+  accent-color: #00aadc;
+  outline: none;
+  box-shadow: none;
+}
+
+.fc-settings-wrap .fc-settings-radio-option input[type=checkbox] {
+  position: relative;
+}
+
+.fc-settings-wrap .fc-settings-radio-option input[type=radio]:checked::before {
+  float: none;
+  display: block;
+  width: 0.5rem;
+  height: 0.5rem;
+  margin: 0;
+  line-height: 0;
+}
+
+.fc-settings-wrap .fc-settings-radio-option input[type=checkbox]:checked::before {
+  float: none;
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  display: block;
+  width: 1.3125rem;
+  height: 1.3125rem;
+  margin: 0;
+  line-height: 0;
+  transform: translate(-50%, -50%);
+}
+
+.fc-settings-wrap .fc-settings-radio-option input[type=radio]:focus,
+.fc-settings-wrap .fc-settings-radio-option input[type=radio]:focus-visible,
+.fc-settings-wrap .fc-settings-radio-option input[type=checkbox]:focus,
+.fc-settings-wrap .fc-settings-radio-option input[type=checkbox]:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
+.fc-settings-radio-option__label {
+  flex: 1 1 auto;
+  min-width: 0;
+  text-align: left;
+}
+
+.fc-settings-radio-option:hover {
+  background: #f5f7f8;
+}
+
+.fc-settings-radio-option.is-selected,
+.fc-settings-radio-option:has(input:checked) {
+  background: #e7edf1;
+  font-weight: 600;
+  outline: 2px solid #2e4453;
+  outline-offset: 0.5px;
+}
+
+.fc-settings-radio-option:has(input:focus-visible) {
+  outline: 2px solid #00aadc;
+  outline-offset: 0.5px;
+}
+
+.fc-settings-radio-option.is-disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.fc-settings-radio-option.is-disabled:hover {
+  background: var(--fluidcheckout--color--white, #fff);
+}
+
+.fc-settings-radio-option.is-disabled.is-selected,
+.fc-settings-radio-option.is-disabled:has(input:checked) {
+  background: #e7edf1;
+}
